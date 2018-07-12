@@ -8,6 +8,9 @@ Refines and extracts the necessary features based on the paper "Impact of HbA1c 
 build_tree.py - 
 Uses the sklearn library to build a single decision tree for predicting readmission rates.
 
+utils.py -
+Utility functions for understanding the tree structures we create.
+
 diabetic_data.csv - 
 Raw data file from the UCI Machine Learning Repository of all samples and all features.
 
