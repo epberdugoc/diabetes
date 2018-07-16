@@ -5,11 +5,14 @@ Here we include a description of each file in this repository.
 clean_data.py - 
 Refines and extracts the necessary features based on the paper "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records". Input: diabetic_data.csv. Output: diabetic_data_cleaned.csv
 
-build_tree.py - 
-Uses the sklearn library to build a single decision tree for predicting readmission rates.
+main.py - 
+Main driver for the data analysis.
 
-utils.py -
-Utility functions for understanding the tree structures we create.
+tree_utils.py -
+Utility functions for building and constructing trees.
+
+output_utils.py -
+Utility functions for visualizing the tress we create.
 
 diabetic_data.csv - 
 Raw data file from the UCI Machine Learning Repository of all samples and all features.
