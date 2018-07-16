@@ -12,7 +12,7 @@ tree_utils.py -
 Utility functions for building and constructing trees.
 
 output_utils.py -
-Utility functions for visualizing the tress we create.
+Utility functions for visualizing the trees we create.
 
 diabetic_data.csv - 
 Raw data file from the UCI Machine Learning Repository of all samples and all features.
