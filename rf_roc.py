@@ -16,6 +16,9 @@ df = read_csv('diabetic_data_cleaned.csv')
 X = df.values[:,:-1]  # each row of X is an individual sample and each column is a feature. 
 Y = df.values[:,-1]  # Y is a column vector of the target variable values.
 
+# Scale the features
+X = (X - X.mean(axis=0)) / X.std(axis=0)
+
 # Allocate storage for ROC curves.
 num_pts = 100
 tpr = np.zeros( num_pts+2, dtype='float64') # True positive rate
