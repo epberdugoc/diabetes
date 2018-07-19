@@ -10,11 +10,14 @@ from tree_utils import build_decision_tree, confusion_matrix_values
 '''
 
 # Read csv file with cleaned data and store in 'df'.
-df = read_csv('diabetic_data_cleaned.csv')
+df = read_csv('diabetic_data_cleaned2.csv')
 
 # Convert pandas dataframe to numpy array.
 X = df.values[:,:-1]  # each row of X is an individual sample and each column is a feature. 
 Y = df.values[:,-1]  # Y is a column vector of the target variable values.
+
+# Scale the features
+X = ( X - X.mean(axis=0) ) / X.std(axis=0)
 
 # Allocate storage for ROC curves.
 num_pts = 100
@@ -50,4 +53,5 @@ plt.xlim([0,1])
 plt.ylim([0,1])
 plt.xlabel("False Positive Rate", fontsize=15)
 plt.ylabel("True Positive Rate", fontsize=15)
-plt.savefig("roc_md.png",dpi=300)
+plt.show()
+#plt.savefig("dt_roc_md.png",dpi=300)
